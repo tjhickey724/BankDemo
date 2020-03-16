@@ -16,6 +16,11 @@ public class Bank {
 		    return a;
 		  }
 	  
+	  public void transfer(Account a, Account b, int money){
+		    a.withdraw(money);
+		    b.deposit(money);
+		}
+	  
 	  public Account openAccount(String acctType, String owner, int initialBalance){
 		  Account a; 
 		  switch(acctType) {		  

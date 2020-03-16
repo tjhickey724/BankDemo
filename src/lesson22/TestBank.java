@@ -13,8 +13,10 @@ public class TestBank {
 		Account a3 = b.openAccount("CheckingPlus", "Tim", 1000, a1);
 		a3.withdraw(10000);
 		a2.deposit(777);
-		b.openAccount("Yas",100000);
-		b.openAccount("Tim",10000);
+		
+		Account a4 = b.openAccount("Tim",100000);
+		Account a5 = b.openAccount("Tim",10000);
+		b.transfer(a4,a5,2000);
 		a1.deposit(123);
 		int z = a1.getBalance();
 		System.out.println("Credit Card Balance is "+z);
